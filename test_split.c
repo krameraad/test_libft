@@ -1,5 +1,9 @@
 #include "libft.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include <bsd/string.h>
 
 #define TEST_SPLIT(x, y)	s = ft_split(x, y);		\
 					printf("TEST X: \"%s\"\n", x);	\
