@@ -5,16 +5,25 @@
 #include <string.h>
 #include <bsd/string.h>
 
-char	test_tolower(unsigned int i, char c)
+char	wackycase(unsigned int i, char c)
 {
-	i = 0;
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
+	if (i % 2)
+	{
+		if (c >= 'A' && c <= 'Z')
+			c += 32;
+		return (c);
+	}
+	else if (c >= 'a' && c <= 'z')
+		c -= 32;
 	return (c);
 }
 
 int main()
 {
-	printf("%s", ft_strmapi("HELLO! how are you", test_tolower));
+	char *src1 = "HELLO! how are you, I'm doing fine actually. I was wondering when you were going to talk about that 'thing'. You know. That thing you were supposed to tell me.";
+	char *src2 = "a";
+	char *dst = ft_strmapi(src1, wackycase);
+
+	printf("%s", dst);
 	return 0;
 }
