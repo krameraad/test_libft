@@ -17,7 +17,7 @@
 #define BOLD_UNDERLINE "\e[1;4m"
 
 #define START_TESTS(x) \
-printf(HEADER "## " x "\n\n"); \
+printf(HEADER x "\n\n"); \
 unsigned char	tests = 0; \
 unsigned char	tests_complete = 0; \
 int				result; \
